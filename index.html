@@ -64,6 +64,35 @@
         #td_hover:hover{background-color:#E0F2F7}
         #td_hover2:hover{background-color:#E3F6CE}
     </style>
+
+
+    <script type="text/javascript">
+    function bookmarksite(title,url) {
+       // Internet Explorer
+       if(document.all)
+       {
+           window.external.AddFavorite(url, title);
+       }
+       // Google Chrome
+       else if(window.chrome){
+          alert("Ctrl+D키를 누르시면 즐겨찾기에 추가하실 수 있습니다.");
+       }
+       // Firefox
+       else if (window.sidebar) // firefox
+       {
+           window.sidebar.addPanel(title, url, "");
+       }
+       // Opera
+       else if(window.opera && window.print)
+       { // opera
+          var elem = document.createElement('a');
+          elem.setAttribute('href',url);
+          elem.setAttribute('title',title);
+          elem.setAttribute('rel','sidebar');
+          elem.click();
+       }
+    }
+    </script>
 </head>
 
 
@@ -71,14 +100,16 @@
     <h1 style="font-family: sans-serif; color:#2f7765; text-align:center;"> <b>⛳️BAYER MONTHLY T&O⛳️</b></h1>
 
     <h4 style="font-family: sans-serif; text-align:center;">
-        <a href="http://pf.kakao.com/_sPSzC"; target="_blank"; style="background-color:lemonchiffon">💛잔디관리 카카오톡 가기</a>
+        <a href="javascript:bookmarksite('⛳️월간 잔디관리 테이블','https://environmentalsciencekorea.github.io/Monthly-Turf-Table')"; style="background-color:lavender" >👉즐겨찾기 추가하기</a>
         <br>
         <a href="http://www.environmentalscience.bayer.kr/turf-management/wheretobuygolfmanagement"; target="_blank"; style="background-color:lightcyan">💚제품 판매처 목록</a>
+        <br>
+        <a href="http://pf.kakao.com/_sPSzC"; target="_blank"; style="background-color:lemonchiffon">💛잔디관리 카카오톡 바로가기</a>
     </h4>
     
     <h5 style="text-align: center; color:grey;">※ 제품과 증상을 클릭하시면 자세한 정보가 나와요.</h5>
 
-    <table class="tg"; width="150%";>
+    <table class="tg"; width="100%";>
 
     <thead>
     <tr>
